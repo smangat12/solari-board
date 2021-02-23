@@ -391,7 +391,7 @@ function updateSolariBoard() {
             syncing = false;
             updateSolariTable(GetFailBoard());
             NextDue("#next-due", '-FA1L-', '', '');
-            $("ul.solari-board-columns li.departure").text("FAIL WHALE");
+            $("ul.solari-board-columns li.departure").text("POOT...");
         });
 }
 
