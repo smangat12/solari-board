@@ -390,7 +390,7 @@ function updateSolariBoard() {
         }).error(function () {
             syncing = false;
             updateSolariTable(GetFailBoard());
-            NextDue("#next-due", '-FA1L-', '', '');
+            NextDue("#next-due", '-FA0L-', '', '');
             $("ul.solari-board-columns li.departure").text("POOT...");
         });
 }
