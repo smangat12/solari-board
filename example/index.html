@@ -19,9 +19,11 @@
     <link rel="stylesheet" type="text/css" href="../css/solari.css" />
 
     <!-- Audio -->
-    <audio src="../audio/solari.mp3" id="solari-audio">
-                Your browser does not support the audio element.
+    <audio controls autoplay>
+        <source src="../audio/solari.mp3" id="solari-audio" type="audio/mp3">
+    Your browser does not support the audio element.
     </audio>
+    
     <script>
         $(document).ready(function() {
             addSolariBoard();
