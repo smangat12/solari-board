@@ -50,7 +50,7 @@ var EMPTY_ROW = {
 
 //if true, the status column will be handled automatically according to time and date. false will override status with nStatus from payload
 var status_override = true;
-var URL = "../example/postJsonp.py"
+var URL = "../example/testj2.json"
 
 //used to add extra params that change over time.  /example_realtime makes use of this
 var URL_SUFFIX = "";
