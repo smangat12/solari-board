@@ -43,6 +43,7 @@ var REFRESH_TIME = 60; //refresh time in seconds
 var EMPTY_ROW = {
     "sTime": "",
     "sDeparture": "",
+    "sTimeEnd": "",
     "nStatus": 0,
     "sStatus": "",
     "nTrack" : 0
@@ -114,8 +115,9 @@ function addSolariBoard(divSelector) {
             "</div>" +
             "</header>" +
             "<ul class=\"solari-board-columns rounded\">" +
-            "<li class=\"time\">Time</li>" +
+            "<li class=\"time\">Start time</li>" +
             "<li class=\"departure\">Departure</li>" +
+            "<li class=\"time\">End time</li>" +
             "<li class=\"status\">Status</li>" +
             "<li class=\"track\">Track</li>" +
             "</ul>" +
@@ -226,6 +228,7 @@ function UpdateSolariRow(row, current_row, new_row) {
     var rate = RATE_BASE + Math.random() * RATE_VARIANCE + Math.random() * RATE_VARIANCE + Math.random() * RATE_VARIANCE;
 
     SpinChars(rate, '#time-row' + row, TIME_BOXES, current_row.sTime.replace(":",""), new_row.sTime.replace(":",""));
+    //probably need to duplicate this for sTimeEnd, no?
     SpinChars(rate, '#departure-row' + row, DEPARTURE_BOXES, current_row.sDeparture, new_row.sDeparture);
 
     //turn track numbers into strings for display. Ensure they are always two chars long
@@ -325,10 +328,11 @@ function GetFailBoard() {
     // update each row on the board
     for (var row = 0; row < BOARD_ROWS; row++) {
         board[row] = {
-            "sTime": "",
+            "sTime": "POOT",
             "sDeparture": fail_whale[row],
+            "sTimeEnd": "WERR",
             "nStatus": 0,
-            "nTrack": 0
+            "nTrack": 69
         };
     }
     return board;
