@@ -178,7 +178,7 @@ function addSolariBoard(divSelector) {
             $section = $('#departures .solari-board-rows');
         }
         // add a row
-        $section.append('<li class=board-data id=row' + add_rows + '><ul><li class=time></li><li class=departure></li></li><li class=status><div class=iconbox><div class=status-icon></div></div></li><li class="track"></li><li class=alert><span class="circle"></span></li></ul></li>');
+        $section.append('<li class=board-data id=row' + add_rows + '><ul><li class=time></li><li class=departure></li><li class=time></li></li><li class=status><div class=iconbox><div class=status-icon></div></div></li><li class="track"></li><li class=alert><span class="circle"></span></li></ul></li>');
 
         // add the letter boxes in the time column
         for (var add_time_col = 0; add_time_col < TIME_BOXES; add_time_col++) {
