@@ -194,6 +194,15 @@ function addSolariBoard(divSelector) {
             $('#row' + add_rows + ' li.departure').append('<div id=departure-row' + add_rows + 'box' + add_cols + ' class=letterbox></div>');
         }
 
+        // add the letter boxes in the end time column
+        for (var add_endtime_col = 0; add_endtime_col < TIME_BOXES; add_endtime_col++) {
+            $('#row' + add_rows + ' li.time').append('<div id=time-row' + add_rows + 'box' + add_endtime_col + ' class=letterbox></div>');
+            // insert a dot after the second box
+            if (add_endtime_col === 1) {
+                $('#row' + add_rows + ' li.time').append('<div class=dot>.</div>');
+            }
+        }
+        
         // add the letter boxes in the track column
         for (var add_track_col = 0; add_track_col < TRACK_BOXES; add_track_col++) {
             $('#row' + add_rows + ' li.track').append('<div id=track-row' + add_rows + 'box' + add_track_col + ' class=letterbox></div>');
