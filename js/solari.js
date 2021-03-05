@@ -228,7 +228,7 @@ function UpdateSolariRow(row, current_row, new_row) {
     var rate = RATE_BASE + Math.random() * RATE_VARIANCE + Math.random() * RATE_VARIANCE + Math.random() * RATE_VARIANCE;
 
     SpinChars(rate, '#time-row' + row, TIME_BOXES, current_row.sTime.replace(":",""), new_row.sTime.replace(":",""));
-    //probably need to duplicate this for sTimeEnd, no?
+    SpinChars(rate, '#time-row' + row, TIME_BOXES, current_row.sTimeEnd.replace(":",""), new_row.sTimeEnd.replace(":",""));
     SpinChars(rate, '#departure-row' + row, DEPARTURE_BOXES, current_row.sDeparture, new_row.sDeparture);
 
     //turn track numbers into strings for display. Ensure they are always two chars long
@@ -315,7 +315,7 @@ function SpinIt(selector, num_spins, rate, pixel_distance, final_pos) {
 
 function GetFailBoard() {
     var fail_whale = [];
-    fail_whale[0] = "    v  v        v";
+    fail_whale[0] = "    !  !        !";
     fail_whale[1] = "    !  !  v     !  v";
     fail_whale[2] = "    ! .-, !     !  !";
     fail_whale[3] = " .--./ /  !  _.---.!";
@@ -331,8 +331,6 @@ function GetFailBoard() {
             "sTime": "POOT",
             "sDeparture": fail_whale[row],
             "sTimeEnd": "WERR",
-            "nStatus": 0,
-            "nTrack": 69
         };
     }
     return board;
