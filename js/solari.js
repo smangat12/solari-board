@@ -228,7 +228,6 @@ function UpdateSolariRow(row, current_row, new_row) {
     var rate = RATE_BASE + Math.random() * RATE_VARIANCE + Math.random() * RATE_VARIANCE + Math.random() * RATE_VARIANCE;
 
     SpinChars(rate, '#time-row' + row, TIME_BOXES, current_row.sTime.replace(":",""), new_row.sTime.replace(":",""));
-    SpinChars(rate, '#time-row' + row, TIME_BOXES, current_row.sTimeEnd.replace(":",""), new_row.sTimeEnd.replace(":",""));
     SpinChars(rate, '#departure-row' + row, DEPARTURE_BOXES, current_row.sDeparture, new_row.sDeparture);
 
     //turn track numbers into strings for display. Ensure they are always two chars long
