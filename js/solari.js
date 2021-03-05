@@ -118,8 +118,8 @@ function addSolariBoard(divSelector) {
             "<li class=\"time\">Start time</li>" +
             "<li class=\"departure\">Departure</li>" +
             "<li class=\"time\">End time</li>" +
-            "<li class=\"status\">Status</li>" +
-            "<li class=\"track\">Track</li>" +
+            //"<li class=\"status\">Status</li>" +
+            //"<li class=\"track\">Track</li>" +
             "</ul>" +
             "<ul class=\"solari-board-rows rounded\">" +
             "</ul>" +
@@ -178,7 +178,7 @@ function addSolariBoard(divSelector) {
             $section = $('#departures .solari-board-rows');
         }
         // add a row
-        $section.append('<li class=board-data id=row' + add_rows + '><ul><li class=time></li><li class=departure></li><li class=time></li></li><li class=status><div class=iconbox><div class=status-icon></div></div></li><li class="track"></li><li class=alert><span class="circle"></span></li></ul></li>');
+        $section.append('<li class=board-data id=row' + add_rows + '><ul><li class=time></li><li class=departure></li><li class=time></li></li><li class=alert><span class="circle"></span></li></ul></li>');
 
         // add the letter boxes in the time column
         for (var add_time_col = 0; add_time_col < TIME_BOXES; add_time_col++) {
@@ -192,15 +192,6 @@ function addSolariBoard(divSelector) {
         // add the letter boxes in the middle column
         for (var add_cols = 0; add_cols < DEPARTURE_BOXES; add_cols++) {
             $('#row' + add_rows + ' li.departure').append('<div id=departure-row' + add_rows + 'box' + add_cols + ' class=letterbox></div>');
-        }
-
-        // add the letter boxes in the end time column
-        for (var add_endtime_col = 0; add_endtime_col < TIME_BOXES; add_endtime_col++) {
-            $('#row' + add_rows + ' li.time').append('<div id=time-row' + add_rows + 'box' + add_endtime_col + ' class=letterbox></div>');
-            // insert a dot after the second box
-            if (add_endtime_col === 1) {
-                $('#row' + add_rows + ' li.time').append('<div class=dot>.</div>');
-            }
         }
         
         // add the letter boxes in the track column
