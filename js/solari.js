@@ -329,7 +329,6 @@ function GetFailBoard() {
         board[row] = {
             "sTime": "POOT",
             "sDeparture": fail_whale[row],
-            "sTimeEnd": "WERR",
         };
     }
     return board;
